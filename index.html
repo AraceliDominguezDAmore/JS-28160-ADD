@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="https://bootswatch.com/5/sketchy/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>DISQUERIA ONLINE | Tienda</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="row align-items-stretch justify-content-between">
+                <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                    <a class="navbar-brand" href="#">DISQUERIA ONLINE</a>
+                    <a href="compra.html" class="btn btn-primary btn-block" id="procesar-pedido">Ir al carrito</a>
+                    <img src="img/cart.jpeg" class="nav-link dropdown-toggle img-fluid" height="70px" width="70px" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></img>
+                    <div id="carrito" class="dropdown-menu" aria-labelledby="navbarCollapse">
+                        <table id="lista-carrito" class="table">
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 my-4 mx-auto text-center">
+            <h1 class="display-4 mt-4">Nuestros Discos</h1>
+            <p class="lead">Selecciona los productos que desees y continua la compra</p>
+        </div>
+
+        <div class="container" id="lista-productos">
+            <div class="row mb-3 text-center">
+                <div class="card mb-4 shadow-sm col-4">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Map of the Soul: 7</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/MOTS.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$ <span class="">5500</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>BTS</li>
+                            <li>Formato Digital</li>
+                            <li>Big Hit - IRIVER</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-warning agregar-carrito" data-id="1">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm col-4">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">FOUR</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/four.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$ <span class="">6000</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>One Direction</li>
+                            <li>Formato Digital / Fisico</li>
+                            <li>Columbia Records</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-dark agregar-carrito" data-id="2">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm col-4">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">SOUNDS GOOD FEELS GOOD</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/SGFG.png" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$ <span class="">4000</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>5 Seconds of Summer</li>
+                            <li>Formato Fisico</li>
+                            <li>Columbia Records</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-success agregar-carrito" data-id="3">Comprar</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row mb-3 text-center">
+                <div class="card mb-4 shadow-sm col-4">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">YOUNGBLOOD</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/YB.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$ <span class="">5000</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>5 Seconds of Summer</li>
+                            <li>Formato Digital</li>
+                            <li>Capitol Records</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-success agregar-carrito" data-id="4">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm col-4">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">WINGS</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/WINGS.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$ <span class="">5000</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>BTS</li>
+                            <li>Formato Digital / Fisico</li>
+                            <li>Big Hit - Pdogg</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-warning agregar-carrito" data-id="5">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm col-4">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">TAKE ME HOME</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/tmh.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$ <span class="">5300</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>One Direction</li>
+                            <li>Formato Fisico</li>
+                            <li>Syco - Sony</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-dark agregar-carrito" data-id="6">Comprar</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row mb-3 text-center">
+                <div class="card mb-4 shadow-sm col-4">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">MIDNIGHT MEMORIES</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/mm.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$ <span class="">4000</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>One Direction</li>
+                            <li>Formato Digital</li>
+                            <li>Syco - Columbia</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-dark agregar-carrito" data-id="7">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm col-4">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">CALM</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/CALM.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$ <span class="">3000</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>5 Seconds of Summer</li>
+                            <li>Formato Digital / Fisico</li>
+                            <li>Interscope Records</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-success agregar-carrito" data-id="8">Comprar</a>
+                    </div>
+                </div>
+
+                <div class="card mb-4 shadow-sm col-4">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">DARK & WILD</h4>
+                    </div>
+                    <div class="card-body">
+                        <img src="img/DW.jpg" class="card-img-top">
+                        <h1 class="card-title pricing-card-title precio">$ <span class="">4500</span></h1>
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li></li>
+                            <li>BTS</li>
+                            <li>Formato Fisico</li>
+                            <li>Big Hit - Pdogg</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-warning agregar-carrito" data-id="9">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/carrito.js"></script>
+    <script src="js/pedido.js"></script>
+</body>
+</html>
