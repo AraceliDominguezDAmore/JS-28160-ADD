@@ -16,7 +16,7 @@ class Carrito {
             id: producto.querySelector('a').getAttribute('data-id'),
             cantidad: 1
         }
-        console.log(infoProducto)
+        //console.log(infoProducto)
         let productosLS;
         productosLS = this.obtenerProductosLocalStorage();
         productosLS.forEach(function (productoLS){
@@ -45,6 +45,7 @@ class Carrito {
         `;
         listaProductos.appendChild(row);
         this.guardarProductosLocalStorage(producto);
+
     }
 
     //Elimina productos del carrito
@@ -55,22 +56,23 @@ class Carrito {
             e.target.parentElement.parentElement.remove();
             producto = e.target.parentElement.parentElement;
             productoID = producto.querySelector('a').getAttribute('data-id');
-            const Toast = Swal.mixin({
-                toast: true,
-                position: 'top-end',
-                showConfirmButton: false,
-                timer: 2000,
-                timerProgressBar: true,
-                didOpen: (toast) => {
-                    toast.addEventListener('mouseenter', Swal.stopTimer)
-                    toast.addEventListener('mouseleave', Swal.resumeTimer)
-                }
-            })
-            Toast.fire({
-                icon: 'error',
-                title: 'Producto eliminado correctamente'
-            })
         }
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 2000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer)
+              toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+          })
+          
+          Toast.fire({
+            icon: 'success',
+            title: 'Producto eliminado correctamente'
+          })
         this.eliminarProductoLocalStorage(productoID);
         this.calcularTotal();
     }
@@ -89,6 +91,7 @@ class Carrito {
     //Comprobar elementos en el LS
     obtenerProductosLocalStorage(){
         let productoLS;
+
         //Comprobar si hay algo en LS
         if(localStorage.getItem('productos') === null){
             productoLS = [];
@@ -163,6 +166,7 @@ class Carrito {
     //Procesar pedido
     procesarPedido(e){
         e.preventDefault();
+
         if(this.obtenerProductosLocalStorage().length === 0){
         }
         else {
@@ -173,17 +177,17 @@ class Carrito {
     //Calcular montos
     calcularTotal(){
         let productosLS;
-        console.log(productosLS)
+        //console.log(productosLS)
         let total = 0, igv = 0, subtotal = 0;
         productosLS = this.obtenerProductosLocalStorage();
         for(let i = 0; i < productosLS.length; i++){
             let element = parseInt(productosLS[i].precio * productosLS[i].cantidad);
-            console.log(element)
+            //console.log(element)
             total = total + element;
-            console.log (productosLS)
+            //console.log (productosLS)
         }
         
-        igv = parseFloat(total * 0.21).toFixed(2);
+        igv = parseFloat(total * 0.18).toFixed(2);
         subtotal = parseFloat(total-igv).toFixed(2);
 
         document.getElementById('subtotal').innerHTML = "S/. " + subtotal;
